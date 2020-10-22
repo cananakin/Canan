@@ -1,0 +1,53 @@
+<?php
+/**
+ * @var $block \Akin\Canan\Block\Html\Game
+ * 
+ * $block->displayGamePopup()
+ * 
+ * __('Hello Akin_Canan::html/game.phtml')
+ * 
+ */
+?>
+
+<div class="footer links custom-footer">
+	<button class="btn-primary" id="myBtn">Lets Play A Game</button>
+</div>
+
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<div class="modal-header">
+			<span class="close">&times;</span>
+			<h1>Hello Guest Lets Play The Game</h1>
+		</div>
+		<div class="modal-body">
+			<p>Right! Lets guess some number. It should be between 1 and 50.</p>
+			<div class="row mt10">
+				<div class="col-md-8">
+					<input type="text" class="guess-input" id="guess_number" placeholder="Please enter a number">
+					<span class="alert text-danger"></span>
+				</div>
+				<div class="col-md-4">
+					<button id="guessNumberHandle" class="guess-button" >Guess</button>
+				</div>
+			</div>
+			<div class="result-win">
+				<div class="flex">
+					<img width="80" src="<?php echo $this->getViewFileUrl('Akin_Canan::images/fireworks.svg'); ?>" />
+					<h2 class="result-text text-success"></h2>
+				</div>
+				<hr>
+				<h3>Results: You win! The number was <strong class="text-success"></strong> </h3>
+				<p>You can see your stages below</p>
+				<ul></ul>
+			</div>
+			<div class="result-sorry">
+				<h2 class="result-text text-warning"></h2>
+				<img width="80" src="<?php echo $this->getViewFileUrl('Akin_Canan::images/sorry.svg'); ?>" />
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button id="startHandle" class="btn-primary">Start Again</button>
+			<button id="closeModal" class="btn-default">Cancel</button>
+		</div>
+	</div>
+</div>

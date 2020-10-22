@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+		<css src="Akin_Canan::css/custom.css"/>
+		<css src="Akin_Canan::css/animation.css"/>
+		<script src="Akin_Canan::js/custom.js"/>
+    </head>
+	<body>
+		<referenceBlock name="footer">
+			<block as="html_game" class="Akin\Canan\Block\Html\Game" name="html.game" template="Akin_Canan::html/game.phtml"/>
+		</referenceBlock>
+	</body>
+</page>
